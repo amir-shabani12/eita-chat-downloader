@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "دانلودگر فایل گفتگوی ایتا",
+  "description": "بررسی کامل تاریخچه یک گفتگو، انتخاب پسوند و دانلود فایل‌ها در ایتا وب",
+  "version": "1.0.0",
+  "minimum_chrome_version": "120",
+  "permissions": ["scripting", "downloads"],
+  "host_permissions": ["https://web.eitaa.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "دانلود فایل‌های گفتگو" }
+}

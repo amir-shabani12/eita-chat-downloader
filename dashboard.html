@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>دانلودگر گفتگوی ایتا</title><link rel="stylesheet" href="dashboard.css"></head>
+<body><main>
+  <header><div class="badge">EITAA / FILE COLLECTOR</div><h1>فایل‌های یک گفتگو، یک‌جا.</h1><p>ابتدا تمام تاریخچه بررسی می‌شود؛ سپس پسوندها را برای دانلود انتخاب کنید.</p></header>
+  <section class="card"><div class="section-title"><span class="step">۱</span><h2>انتخاب گفتگو</h2></div>
+    <p>در ایتا وب گفتگوی شخص را باز کنید. در طول عملیات، همان حساب و گفتگو را باز نگه دارید.</p>
+    <div class="toolbar"><select id="tabs" aria-label="زبانه ایتا"></select><button id="refresh">تازه‌سازی زبانه‌ها</button><button id="connect" class="primary">اتصال به گفتگوی باز</button></div>
+    <div id="chat" class="muted">هنوز گفتگویی انتخاب نشده است.</div>
+    <div class="toolbar"><button id="scan" class="primary" disabled>بررسی تمام تاریخچه</button><button id="stop" disabled>توقف</button><button id="reset" disabled>بررسی دوباره از ابتدا</button></div>
+    <div id="status" role="status" aria-live="polite">آماده اتصال</div><progress id="progress"></progress>
+    <div id="stats" class="stats"></div>
+  </section>
+  <section class="card"><div class="section-title"><span class="step">۲</span><h2>انتخاب پسوند و دانلود</h2></div>
+    <p id="coverage">دانلود پس از تأیید پایان تاریخچه فعال می‌شود.</p>
+    <div class="toolbar"><button id="all" disabled>انتخاب همه</button><button id="none" disabled>لغو انتخاب</button><span id="selection" class="muted"></span></div>
+    <div id="extensions" class="extensions"><div class="empty">پسوندهای پیدا‌شده اینجا نمایش داده می‌شوند.</div></div>
+    <div class="toolbar"><button id="download" class="primary" disabled>دانلود پسوندهای انتخابی</button><button id="retry" disabled>تلاش دوباره برای ناموفق‌ها</button><button id="export" disabled>خروجی فهرست JSON</button></div>
+    <p class="muted">محل ذخیره: Downloads / Eitaa / شناسه گفتگو / پسوند. حجم بعضی عکس‌ها تا آماده‌شدن فایل مشخص نیست.</p>
+    <div id="current" role="status"></div><div id="error" class="error" role="alert" hidden></div>
+    <label class="search-label">جستجو در فایل‌های شناسایی‌شده <input id="search" type="search" placeholder="نام فایل یا پسوند"></label>
+    <div class="table-wrap"><table><thead><tr><th>نام فایل</th><th>پسوند</th><th>حجم</th><th>وضعیت</th></tr></thead><tbody id="files"></tbody></table></div>
+    <button id="more" hidden>نمایش فایل‌های بیشتر</button>
+  </section>
+  <footer>اطلاعات فهرست فقط در همین مرورگر ذخیره می‌شود. عکس، ویدیو، صدا و سند پیوست بررسی می‌شوند؛ لینک‌های داخل متن دانلود نمی‌شوند. <button id="forget" disabled>پاک‌کردن فهرست محلی این گفتگو</button></footer>
+</main><script src="core.js"></script><script src="store.js"></script><script src="dashboard.js"></script></body></html>
